@@ -1,4 +1,4 @@
-package mod2.strings;
+package educativeIO.mod2.strings;
 
 import java.util.HashSet;
 import java.util.Set;

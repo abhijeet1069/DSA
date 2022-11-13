@@ -1,4 +1,4 @@
-package mod2.arrays;
+package educativeIO.mod2.arrays;
 
 import java.util.*;
 
@@ -6,7 +6,7 @@ class Subsets {
     /**Start with an empty set.
      * Fetch all the contents and keep adding the current Element to all subsets of superset.
      */
-    /
+
     public static List<List<Integer>> findSubsets(int[] nums) {
         List<List<Integer>> superset = new ArrayList<>();
         superset.add(new ArrayList<>());

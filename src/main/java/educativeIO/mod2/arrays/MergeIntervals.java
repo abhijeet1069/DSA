@@ -1,7 +1,6 @@
-package mod2.arrays;
+package educativeIO.mod2.arrays;
 
 // Importing required functions
-import java.beans.IntrospectionException;
 import java.util.*;
 class Interval {
     public int first;

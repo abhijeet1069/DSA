@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c94e45f2-54d9-4236-a4e3-7e30ee81f605" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mod2/arrays/MergeIntervals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/educativeIO/mod2/arrays/MergeIntervals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mod2/arrays/SortedArraySquares.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/educativeIO/mod2/arrays/SortedArraySquares.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mod2/arrays/Subsets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/educativeIO/mod2/arrays/Subsets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mod2/common/SortBy2ndParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/educativeIO/mod2/common/SortBy2ndParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mod2/strings/StringSegmentation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/educativeIO/mod2/strings/StringSegmentation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,23 +30,46 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2FO42ZAsAGb4PXJf2cMoSWOTM8R" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/Users/satyam/Personal/DSA"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="DSA" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="DSA" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

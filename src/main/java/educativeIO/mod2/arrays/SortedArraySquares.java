@@ -1,8 +1,6 @@
-package mod2.arrays;
+package educativeIO.mod2.arrays;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class SortedArraySquares {
 
