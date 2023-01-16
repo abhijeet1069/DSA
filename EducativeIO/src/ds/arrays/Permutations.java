@@ -1,4 +1,4 @@
-package mod2.arrays;
+package ds.arrays;
 
 // Java program to print all permutations of a
 // given string.

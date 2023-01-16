@@ -1,4 +1,4 @@
-package mod2.arrays;
+package ds.arrays;
 
 import java.util.*;
 
