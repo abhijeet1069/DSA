@@ -1,4 +1,4 @@
-package educativeIO.mod2.arrays;
+package mod2.arrays;
 
 /*
 All positive integers.

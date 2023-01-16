@@ -1,4 +1,4 @@
-package educativeIO.mod2.common;
+package mod2.common;
 
 import java.util.Arrays;
 import java.util.Comparator;
