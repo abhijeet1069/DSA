@@ -1,4 +1,4 @@
-package ds.graphs;
+package ds.graphs.representation;
 
 import java.util.LinkedList;
 
