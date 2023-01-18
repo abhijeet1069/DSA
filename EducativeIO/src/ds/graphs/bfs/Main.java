@@ -8,9 +8,11 @@ class CheckBFS {
 	  //Breadth First Traversal of Graph g 
 	  public static String bfs(Graph g) {
 	    String result = "";
-
-	    // Write - Your - Code
-
+	    Map<Integer,Boolean> visitedMap = new HashMap<>();
+	    for(int i = 0; i < g.vertices; i++) {
+	    	visitedMap.put(i, false);
+	    }
+	    Queue queue = new Queue(g.vertices);
 	    return result; 
 	  }
 
