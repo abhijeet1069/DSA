@@ -12,7 +12,19 @@ class CheckBFS {
 	    for(int i = 0; i < g.vertices; i++) {
 	    	visitedMap.put(i, false);
 	    }
-	    Queue queue = new Queue(g.vertices);
+	    Integer startVertex = 0;
+	    Queue<Integer> queue = new Queue<>(g.vertices);
+	    queue.enqueue(startVertex);
+	    visitedMap.put(startVertex, true);
+	    
+	    while(queue.getCurrentSize() > 0) {
+	    	int temp =  queue.dequeue();
+	    	DoublyLinkedList list = g.adjacencyList[temp];
+	    	while(!list.isEmpty()) {
+	    		if(visitedMap.get(list.headNode) == false)
+	    			queue.enqueue(list.headNode.data);
+	    	}
+	    }
 	    return result; 
 	  }
 
