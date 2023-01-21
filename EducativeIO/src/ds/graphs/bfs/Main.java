@@ -4,41 +4,30 @@ import java.util.HashMap;
 
 class CheckBFS {
 
-	//Breadth First Traversal of Graph g
 	public static String bfs(Graph g) {
 		String result = "";
+		result += 0;
 		boolean[] visitedMap = new boolean[g.vertices];
 		for(int startVertex = 0; startVertex < g.vertices; startVertex++) {
-			if(!visitedMap[startVertex])
-				result += bfsTraverse(g, startVertex, visitedMap);
+			result += bfsTraverse(g, startVertex, visitedMap);
 		}
 		return result;
 	}
 
 	public static String bfsTraverse(Graph graph, int start, boolean[] visitedMap){
 		String result = "";
-		Queue<Integer> queue = new Queue<>(graph.vertices);
-		queue.enqueue(start);
-		visitedMap[start] = true;
-		while(!queue.isEmpty()){
-			int current_node = queue.dequeue();
-			result += current_node;
-
-			DoublyLinkedList.Node temp = null;
-			if(graph.adjacencyList[current_node] != null)
-				temp = graph.adjacencyList[current_node].headNode;
-
-			while(temp != null){
-				if(visitedMap[(int)temp.data] == false){
-					queue.enqueue((int)temp.data);
-					visitedMap[(int)temp.data] = true;
-				}
-				temp = temp.nextNode;
+		DoublyLinkedList<Integer> list = graph.adjacencyList[start];
+		DoublyLinkedList.Node node = list.getHeadNode();
+		while(node != null){
+			if(visitedMap[(int)node.data] == false){
+				visitedMap[(int)node.data] = true;
+				result += (int)node.data;
 			}
-
+			node = node.nextNode;
 		}
 		return result;
 	}
+
 }
 
 public class Main {
