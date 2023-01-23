@@ -1,4 +1,6 @@
 @echo off 
 title Sync DSA
-echo Hello, World!!
+git add --all
+git commit -m "servion commit"
+git push
 pause
