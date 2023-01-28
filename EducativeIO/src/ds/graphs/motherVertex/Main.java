@@ -25,13 +25,13 @@ public class Main {
         return res;
     }
     
-    public static String dfs(Graph g,int startVertex) {
+    public static int dfs(Graph g,int startVertex) {
         String result = "";
         Map<Integer,Boolean> map = new HashMap<>(); //True - Visited, False = Unvisited
         for(int i = 0; i < g.vertices; i++){
             map.put(i,false);
         }
-        
+        int res = 0;
         Stack<Integer> stack = new Stack<>(g.vertices);
         if(map.get(startVertex) == false) {
         	stack.push(startVertex);
@@ -43,14 +43,18 @@ public class Main {
         		stack.push(temp);
         	}
         	else {
-        		result += stack.pop()+" ";
+        		stack.pop();
+				res++;
         		}
         	}
-        return result;
+        return res;
     }
     
 	 public static int findMotherVertex(Graph g){
-		    // Write - Your - Code    
+		for(int i = 0; i < g.vertices; i++){
+				if(dfs(g,i) == g.vertices)
+					return i;
+			}
 		    return -1;
 		  }
 	 
@@ -61,6 +65,7 @@ public class Main {
 		 g.addEdge(3, 1);
 		 g.addEdge(0, 1);
 		 g.addEdge(1, 2);
-		 g.printGraph();
+		 //g.printGraph();
+		 System.out.println(findMotherVertex(g));
 	 }
 }
