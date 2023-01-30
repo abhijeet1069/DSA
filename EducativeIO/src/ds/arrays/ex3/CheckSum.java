@@ -1,4 +1,16 @@
 package ds.arrays.ex3;
+/**
+ Return an array of 2 integers that add up to the given number or the original array in case a pair is not found.
+ Input:
+    arr = {1, 21, 3, 14, 5, 60, 7, 6}
+    value = 27
+ Output:
+    arr = {21, 6} or {6, 21}
+
+ Sorting for binary search : n*lg(n)
+ Binary Searching for all key-arrayElements : n*lg(n)
+ O(n*lg(n))
+ */
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
