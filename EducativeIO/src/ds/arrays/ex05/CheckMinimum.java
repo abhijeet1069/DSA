@@ -1,4 +1,4 @@
-package ds.arrays.ex5;
+package ds.arrays.ex05;
 
 /**
  Given an array, find the minimum value in the array.

@@ -1,4 +1,4 @@
-package ds.arrays.ex2;
+package ds.arrays.ex02;
 /**
  Merge sorted arrays into a single array.
  Input:

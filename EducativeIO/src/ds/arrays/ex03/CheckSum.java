@@ -1,4 +1,4 @@
-package ds.arrays.ex3;
+package ds.arrays.ex03;
 /**
  Return an array of 2 integers that add up to the given number or the original array in case a pair is not found.
  Input:
@@ -12,7 +12,6 @@ package ds.arrays.ex3;
  O(n*lg(n))
  */
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class CheckSum {

@@ -1,4 +1,4 @@
-package ds.arrays.ex1;
+package ds.arrays.ex01;
 
 import java.util.ArrayList;
 

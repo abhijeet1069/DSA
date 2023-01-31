@@ -1,4 +1,4 @@
-package ds.arrays.ex4;
+package ds.arrays.ex04;
 /**
  Given an array, return an array where each index stores the product of all numbers except the number on the index itself.
     Input : {1,2,3,4}
