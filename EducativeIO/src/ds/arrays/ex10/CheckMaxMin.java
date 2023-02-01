@@ -1,7 +1,8 @@
 package ds.arrays.ex10;
 /**
- * Array : sorted
- * Max-Min form :
+ Given a sorted array, rearrange the array in max-min form.
+ Input - {1,2,3,4,5}
+ Output- {5,1,4,2,3}
  * */
 public class CheckMaxMin {
     public static void maxMin(int[] arr){
