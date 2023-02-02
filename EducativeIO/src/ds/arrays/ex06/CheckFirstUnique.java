@@ -35,7 +35,6 @@ public class CheckFirstUnique {
                     minIndex = index;
                     minKey = key;
                 }
-
             }
         }
         return minKey;
