@@ -122,10 +122,25 @@ public class SinglyLinkedList<T> {
 
     //Deletes data given from the linked list
     public void deleteByValue(T data) {
-        Node current = this.headNode;
-        Node prev = this.headNode;
-        while(current != null){
-            if(current.data)
+        Node currentNode = this.headNode;
+        Node prevNode = null;
+        while(currentNode != null){
+            if(currentNode.data == data){
+                break;
+            }
+            prevNode = currentNode;
+            currentNode = currentNode.nextNode;
+        }
+        if(currentNode == null){ //end of list reached and no match found or the list is empty
+            return;
+        }
+        else{
+            if(prevNode == null){ //Case 1 : Deletion at head
+                headNode = headNode.nextNode;
+            }
+            else{ //Case 2 : Deletion in between
+                prevNode.nextNode = currentNode.nextNode;
+            }
         }
     }
 }
