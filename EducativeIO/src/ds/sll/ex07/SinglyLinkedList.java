@@ -1,4 +1,4 @@
-package ds.sll.ex4;
+package ds.sll.ex07;
 
 public class SinglyLinkedList<T> {
     //Node inner class for SLL
@@ -127,6 +127,7 @@ public class SinglyLinkedList<T> {
         //if empty then simply return
         if (isEmpty())
             return;
+
         //Start from head node
         Node currentNode = this.headNode;
         Node prevNode = null; //previous node starts from null
@@ -136,7 +137,6 @@ public class SinglyLinkedList<T> {
             deleteAtHead();
             return;
         }
-
         //traverse the list searching for the data to delete
         while (currentNode != null) {
             //node to delete is found
@@ -147,14 +147,5 @@ public class SinglyLinkedList<T> {
             prevNode = currentNode;
             currentNode = currentNode.nextNode;
         }
-    }
-    public int length() {
-        int count = 0;
-        Node temp = this.headNode;
-        while(temp != null){
-            temp = temp.nextNode;
-            count++;
-        }
-        return count;
     }
 }

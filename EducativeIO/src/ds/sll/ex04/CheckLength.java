@@ -1,4 +1,4 @@
-package ds.sll.ex4;
+package ds.sll.ex04;
 
 public class CheckLength {
     public static void main( String args[] ) {

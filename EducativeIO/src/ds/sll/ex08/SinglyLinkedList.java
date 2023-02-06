@@ -1,4 +1,4 @@
-package ds.sll.ex7;
+package ds.sll.ex08;
 
 public class SinglyLinkedList<T> {
     //Node inner class for SLL
@@ -10,12 +10,30 @@ public class SinglyLinkedList<T> {
 
     //head node of the linked list
     public Node headNode;
+    public int size;
 
     //constructor
     public SinglyLinkedList() {
         headNode = null;
+        size = 0;
     }
 
+     public Node getHeadNode() {
+        return headNode;
+    }
+
+    public void setHeadNode(Node headNode) {
+        this.headNode = headNode;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+    
     public boolean isEmpty() {
 
         if (headNode == null) return true;
@@ -30,6 +48,7 @@ public class SinglyLinkedList<T> {
         //Linking head to the newNode's nextNode
         newNode.nextNode = headNode;
         headNode = newNode;
+        size++;
     }
 
     //Inserts new data at the end of the linked list
@@ -51,6 +70,7 @@ public class SinglyLinkedList<T> {
         }
         //make newNode the next element of the last node
         last.nextNode = newNode;
+        size++;
     }
 
     //inserts data after the given prev data node
@@ -70,6 +90,7 @@ public class SinglyLinkedList<T> {
         if (currentNode != null) {
             newNode.nextNode = currentNode.nextNode;
             currentNode.nextNode = newNode;
+            size++;
         }
     }
 
@@ -105,24 +126,17 @@ public class SinglyLinkedList<T> {
         return false; //value not found
     }
 
+    //Deletes data from the head of list
     public void deleteAtHead() {
+        //if list is empty then simply return
         if (isEmpty())
             return;
+        //make the nextNode of the headNode equal to new headNode
         headNode = headNode.nextNode;
+        size--;
     }
 
-    public void deleteAtEnd() {
-        if (isEmpty())
-            return;
-        Node prevNode = this.headNode;
-        Node currentNode = prevNode.nextNode;
-        while (currentNode.nextNode != null) {
-            prevNode = currentNode;
-            currentNode = currentNode.nextNode;
-        }
-        prevNode.nextNode = null;
-    }
-
+    //Deletes data given from the linked list
     public void deleteByValue(T data) {
         //if empty then simply return
         if (isEmpty())
@@ -142,6 +156,7 @@ public class SinglyLinkedList<T> {
             //node to delete is found
             if (data.equals(currentNode.data)){
                 prevNode.nextNode = currentNode.nextNode;
+                size--;
                 return;
             }
             prevNode = currentNode;
