@@ -1,5 +1,15 @@
 package ds.sll.ex03;
 
+/**
+Write a function to delete the first occurence of the value from the list.
+Input:
+	linkedList = 3->2->1->0
+	data = 1
+	
+Output:
+	linkedist = 3->2->0
+ * */
+
 public class Deletion {
     public static void main( String args[] ) {
         SinglyLinkedList<Integer> sll = new SinglyLinkedList<Integer>();

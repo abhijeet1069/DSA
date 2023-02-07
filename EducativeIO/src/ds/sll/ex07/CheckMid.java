@@ -1,5 +1,15 @@
 package ds.sll.ex07;
 
+/*
+You have to implement the public static <T> Object findMiddle(SinglyLinkedList<T> list) method, 
+which will take a linked list as an input and return the value at the middle node of the list.
+
+Input:
+	linkedList = 7->14->10->21
+Output:
+	mid = 14
+ * */
+
 class CheckMid {
     public static void main( String args[] ) {
         SinglyLinkedList<Integer> list = new SinglyLinkedList<Integer>();
