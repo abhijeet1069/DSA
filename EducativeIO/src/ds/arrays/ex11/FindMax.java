@@ -1,7 +1,7 @@
 package ds.arrays.ex11;
 
 /**
- Given an integer array, return the max subarray sum.
+ Given an integer array, return the max sub-array sum.
  Input : arr = {1, 7, -2, -5, 10, -1}
  Output: 11
 
