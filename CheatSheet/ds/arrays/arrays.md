@@ -10,7 +10,7 @@
     while(j < size2){ //consume remaining elements if left in array
         }
 
-2) Find product of all elements in array execpt itself.
+2) Find product of all elements in array except itself.
     Input : {1,2,3,4}
     Output : {24,12,8,6}
 

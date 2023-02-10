@@ -1,30 +1,57 @@
 package ds.stackQueue.ex04;
 
-public class QueueWithStack {
-	private Stack stack;
-	
-	public QueueWithStack(Stack s) {
-		this.stack = s;
-	}
-	
-	//check pass by value and pass by reference in java
-	public static void dequeue(Stack stack) {
-		@SuppressWarnings("rawtypes")
-		Stack cloneStack = new QueueWithStack(stack);
-		System.out.println(cloneStack.pop()+" popped!!");
-	}
+/**
+ Implement queue using a stack.
+ Input/Output 
+	enqueue()
+		Input: an integer
+		Output: returns true after inserting value in the queue
+	dequeue()
+		Input: an integer
+		Output: returns true after removing value from the queue
+ */
+
+public class QueueWithStack <V> {
+	private Stack originStack;
+	private Stack tempStack;
+    public QueueWithStack(int maxSize){
+        originStack = new Stack(maxSize);
+        tempStack = new Stack(maxSize);
+    }
+  
+    public void enqueue(V value){
+      	originStack.push(value);
+    }
+    public V dequeue(){
+		while(!originStack.isEmpty()) { //reverse stack
+			tempStack.push(originStack.pop());
+		}
+		
+		V result = (V) tempStack.pop(); //pop the item
+		
+		while(!tempStack.isEmpty()) {
+			originStack.push(tempStack.pop()); //reset to original status
+		}
+		
+        return result;
+    }
+    public boolean isEmpty(){
+        return originStack.isEmpty();
+    }
     
 	public static void main(String[] args) {
-		Stack stack = new Stack(5);
-		stack.push(12);
-		stack.push(13);
-		stack.push(18);
-		stack.push(20);
+	
+		//Abstraction.Internally QueueWithStack is using a stack but we don't know.
+		QueueWithStack<Integer> queue = new QueueWithStack<>(5); 
+		queue.enqueue(12);
+		queue.enqueue(24);
+		queue.enqueue(28);
+		queue.enqueue(33);
+		queue.enqueue(45);
 		
-		dequeue(stack);
+		System.out.println(queue.dequeue());
+		System.out.println(queue.dequeue());
 		
-		while(!stack.isEmpty())
-			System.out.print(stack.pop()+" ");
 	}
 
 }
