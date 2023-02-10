@@ -3,28 +3,28 @@ package ds.stackQueue.ex04;
 public class QueueWithStack {
 	private Stack stack;
 	
-	public QueueWithStack(int maxSize){
-        this.stack = new Stack(maxSize);
-    }
-  
-    public void enqueue(V value){
-      	if()
-    	
-    	while(!this.stack.isFull()) {
-      		this.stack.push(value);
-      	}
-    }
-    public V dequeue(){
-		// Write -- Your -- Code
-        return null;
-    }
-    public boolean isEmpty(){
-        return this.stack.top() == null;
-    }
+	public QueueWithStack(Stack s) {
+		this.stack = s;
+	}
+	
+	//check pass by value and pass by reference in java
+	public static void dequeue(Stack stack) {
+		@SuppressWarnings("rawtypes")
+		Stack cloneStack = new QueueWithStack(stack);
+		System.out.println(cloneStack.pop()+" popped!!");
+	}
     
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		Stack stack = new Stack(5);
+		stack.push(12);
+		stack.push(13);
+		stack.push(18);
+		stack.push(20);
+		
+		dequeue(stack);
+		
+		while(!stack.isEmpty())
+			System.out.print(stack.pop()+" ");
 	}
 
 }
