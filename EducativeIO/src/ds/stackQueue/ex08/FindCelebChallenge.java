@@ -1,13 +1,21 @@
 package ds.stackQueue.ex08;
 
 /**
- Celebrity Problem : Find the celebrity where celebrity is someone that everyone knows, but he/she doesn't know anyone.
+ Celebrity Problem : Find the celebrity where celebrity is someone that everyone knows, but he doesn't know anyone.
+ If party[row][col] == 1, then row knows col.
+Input:
+    party = {
+                {0,1,1,0},
+                {1,0,1,1},
+                {0,0,0,0},
+                {0,1,1,0},
+            }
+ numPeople = 4 (Number of rows in party array)
 
+ Output:
+    2 (because row Index = 2 is a celebrity)
 
- Logic:
-    acquaintance(a,b):
-        1 -> discard a
-        2 -> discard b
+ Using a stack to minimise comparisons is ingenious. Optimization is based on everyone. Pop 2 Push 1 logic.
  */
 
 public class FindCelebChallenge {

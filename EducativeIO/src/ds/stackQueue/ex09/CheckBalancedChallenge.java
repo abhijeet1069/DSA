@@ -3,6 +3,13 @@ package ds.stackQueue.ex09;
 import java.util.HashMap;
 import java.util.Set;
 
+/**
+ Check if a given string is balanced or not.
+ Input:
+ exp = "{[({})]}" , "{[}]"
+ Output:
+ True , False
+ * */
 public class CheckBalancedChallenge {
     public static boolean isBalanced(String exp) {
         Stack<Character> stack = new Stack<>(exp.length()); //just for the worst case

@@ -1,7 +1,18 @@
 package ds.stackQueue.ex10;
 
-/*
- min stack logic is quite ingenious, this can be utilised for other applications too.
+/**
+Return min of sack in O(1) time.
+ Input:
+    stack = top->9,3,1,4,2,5
+ Output:
+    1
+
+ Logic:
+    Max until now logic has been used. For a given stack find the min until now and return tos.
+    stack =         9,3,1,4,2,5
+    MinUntilNow =   1,1,1,2,2,5
+
+ Doesn't matter how many insertions or deletions are there, minUntilNow will return the min element.
  * */
 
 public class MinStack {
@@ -9,7 +20,7 @@ public class MinStack {
 	int maxSize;
     Stack<Integer> originalStack;
     Stack<Integer> minStack;
-    int min;
+    int min; //single element for O(1) operation
     
     //constructor
     public MinStack(int maxSize) {
