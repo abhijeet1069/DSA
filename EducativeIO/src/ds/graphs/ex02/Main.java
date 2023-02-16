@@ -13,6 +13,16 @@ import java.util.Map;
         2
  Output:
     "01342"
+
+ while(!stack.isEmpty()) {
+    int temp = nextUnvisitedNode(g,map,stack.top()); //main line for dfs
+    if(temp != -1) {
+        stack.push(temp);
+    }
+    else {
+        result += stack.pop()+" ";
+    }
+ }
  * */
 class CheckDFS {
 	//return unvisited member of map
@@ -45,7 +55,7 @@ class CheckDFS {
         		map.put(startVertex, true);
         	}
         	while(!stack.isEmpty()) {
-        		int temp = nextUnvisitedNode(g,map,stack.top());
+        		int temp = nextUnvisitedNode(g,map,stack.top()); //main line for dfs
         		if(temp != -1) {
         			stack.push(temp);
         		}
