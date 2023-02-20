@@ -5,9 +5,9 @@
     This merge has an interesting use of while loop instead of using Integer.MAX
     while(i < size1 && j < size2){
         }
-    while(i < size1){ //consume remaining elements if left in array
+    while(i < size1){ //consume remaining elements in array
         }
-    while(j < size2){ //consume remaining elements if left in array
+    while(j < size2){ //consume remaining elements in array
         }
 
 2) Find product of all elements in array except itself.
