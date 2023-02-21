@@ -1,5 +1,8 @@
 package ds.graphs.ex07;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class CheckTree {
 
     public static Graph parentGraph(Graph g){
@@ -35,22 +38,53 @@ public class CheckTree {
         return true;
     }
 
+    public static int lastVertex(Graph g, int startVertex) {
+        int lastVertex = -1;
+        Map<Integer,Boolean> visitedMap = new HashMap<>();
+        for(int i = 0; i < g.vertices; i++) {
+            visitedMap.put(i, false);
+        }
+        DoublyLinkedList.Node tempNode = g.adjacencyList[startVertex].getHeadNode();
+
+        while(tempNode != null) { //last node is last visited node
+            lastVertex = (int) tempNode.data;
+            if(visitedMap.get(tempNode.data) == true){
+                break;
+            }
+            visitedMap.put((Integer) tempNode.data, true);
+            tempNode = tempNode.nextNode;
+        }
+        return lastVertex;
+    }
+
+    public static boolean detectCycle(Graph g){
+        for(int  startVertex = 0; startVertex < g.vertices; startVertex++) {
+            int lastVertex = lastVertex(g,startVertex);
+            if(startVertex == lastVertex) {
+                return true;
+            }
+        }
+        return false;
+    }
     public static boolean isTree(Graph g) {
         Graph pg = parentGraph(g);
         System.out.println("Parent Graph");
-        pg.printGraph();
+       // pg.printGraph();
 
         boolean isOneParent = checkOneParentAndConnected(pg); //assuming 0 is the root node
-        return isOneParent;
+        g.printGraph();
+        boolean isConnected = detectCycle(g);
+        System.out.println(isConnected+" "+isOneParent);
+        return isOneParent && !isConnected;
     }
 
     public static void main(String[] args) {
-        Graph g = new Graph(5);
+        Graph g = new Graph(4);
         g.addEdge(0,1);
         g.addEdge(0,3);
-        g.addEdge(0,2);
+        g.addEdge(2,0);
         g.addEdge(3,2);
-
+        g.printGraph();
         System.out.println(isTree(g));
     }
 }
