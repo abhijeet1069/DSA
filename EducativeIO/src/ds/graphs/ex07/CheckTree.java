@@ -1,6 +1,23 @@
 package ds.graphs.ex07;
 
-import ds.graphs.ex02.Stack;
+/**
+Implement isTree() method to take a directed graph as an input and find out if it is a tree. 
+A graph could only be a tree if:
+	a) Each node, except root, has exactly one parent - Parent graph made by reversing vertices and finding degree.
+	b) There are no cycles - If vertex visited is already present in stack. Then there is a cycle. Also, initially keep startVertex as unvisited. (Based on DFS)
+	c) Graph is connected - Covered under exactly one parent. As unconnected node will have 0 parents
+
+Also, remember the DFS logic which is crucial not only in traversal but also in problems of cycle detection, path existence between two vertices.
+
+Input:
+	|0|->1->3->2->null
+	|1|->null
+	|2|->null
+	|3|->2->null
+
+Output:
+	false
+ * */
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -57,47 +74,50 @@ public class CheckTree {
         return res;
     }
 
-    public static boolean detectCycle(Graph g, int startVertex) {
-        String result = "";
+    public static boolean detectCycle(Graph g) {
         Map<Integer, Boolean> map = new HashMap<>(); //True - Visited, False = Unvisited
         for (int i = 0; i < g.vertices; i++) {
             map.put(i, false);
         }
-        Stack<Integer> stack = new Stack<>(g.vertices);
-        HashSet<Integer> set = new HashSet<>(g.vertices); //Logic : if a vertex already in stack then there is a cycle
-        if (map.get(startVertex) == false) {
+        
+        for(int startVertex = 0; startVertex < g.vertices; startVertex++) {
+        	Stack<Integer> stack = new Stack<>(g.vertices);
+            HashSet<Integer> set = new HashSet<>(g.vertices); //Logic : if a vertex already in stack then there is a cycle
+            
             stack.push(startVertex);
-            map.put(startVertex, true);
+            set.add(startVertex);
+            
+            while (!stack.isEmpty()) {
+                int temp = nextUnvisitedNode(g, map, stack.top()); //main line for dfs
+                if(set.contains(temp)){ //if any cycle detected for any vertex return
+                    return true;
+                }
+                if (temp != -1) {
+                    stack.push(temp);
+                    set.add(temp);
+                }
+                else {
+                    int visited =  stack.pop();
+                    set.remove(visited);
+                }
+            }
         }
-        while (!stack.isEmpty()) {
-            int temp = nextUnvisitedNode(g, map, stack.top()); //main line for dfs
-            if(set.contains(temp)){
-                return true;
-            }
-            if (temp != -1) {
-                stack.push(temp);
-                set.add(temp);
-            }
-            else {
-                int visited =  stack.pop();
-                set.remove(visited);
-            }
+            return false;
         }
-        return false;
-    }
+        
     public static boolean isTree(Graph g) {
         Graph pg = parentGraph(g);
         boolean isOneParent = checkOneParentAndConnected(pg); //assuming 0 is the root node
-        boolean isCycle = detectCycle(g,0);
-        System.out.println(isConnected + " " + isOneParent);
-        return isOneParent && !isConnected;
+        boolean isCycle = detectCycle(g);
+       // System.out.println(isCycle + " " + isOneParent);
+        return isOneParent && !isCycle;
     }
 
     public static void main(String[] args) {
         Graph g = new Graph(4);
         g.addEdge(0, 1);
         g.addEdge(0, 3);
-        g.addEdge(2, 0);
+        g.addEdge(0, 2);
         g.addEdge(3, 2);
         g.printGraph();
         System.out.println(isTree(g));

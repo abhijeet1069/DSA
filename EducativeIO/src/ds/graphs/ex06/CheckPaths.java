@@ -1,5 +1,29 @@
 package ds.graphs.ex06;
 
+/**
+Implement checkPath() method to take a graph and two vertices as an input and find out if a path exists between them.
+	Path - For a path to exist between any two vertices, there should be no repeated sequence of edges and vertices between the source and the destination vertex.
+
+Input:
+Graph:
+	|0|->1->5->null
+	|1|->2->3->null
+	|2|->5->null
+	|3|->null
+	|4|->2->5->null
+	|5|->6->7->3->null
+	|6|->7->null
+	|7|->null
+
+source = 7;
+destination = 0;
+
+Output:
+	false
+	
+Logic : DFS from source vertex and check if path contains destination vertex. 
+ * */
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,7 +43,6 @@ public class CheckPaths {
         return res;
     }
     public static boolean checkPath(Graph g, int source, int destination) {
-        String result = "";
         Map<Integer,Boolean> map = new HashMap<>(); //True - Visited, False = Unvisited
         for(int i = 0; i < g.vertices; i++){
             map.put(i,false);
@@ -57,7 +80,7 @@ public class CheckPaths {
         g.addEdge(5,3);
         g.addEdge(6,7);
 
-        //g.printGraph();
+        g.printGraph();
 
         int source = 7;
         int destination = 0;
