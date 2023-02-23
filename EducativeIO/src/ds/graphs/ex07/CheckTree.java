@@ -4,10 +4,12 @@ package ds.graphs.ex07;
 Implement isTree() method to take a directed graph as an input and find out if it is a tree. 
 A graph could only be a tree if:
 	a) Each node, except root, has exactly one parent - Parent graph made by reversing vertices and finding degree.
-	b) There are no cycles - If vertex visited is already present in stack. Then there is a cycle. Also, initially keep startVertex as unvisited. (Based on DFS)
+	b) There are no cycles - If vertex visited is already present in stack. Then there is a cycle. Also, initially keep
+        startVertex as unvisited. (Based on DFS)
 	c) Graph is connected - Covered under exactly one parent. As unconnected node will have 0 parents
 
-Also, remember the DFS logic which is crucial not only in traversal but also in problems of cycle detection, path existence between two vertices.
+Also, remember the DFS logic which is crucial not only in traversal but also in problems of cycle detection, path
+ existence between two vertices.
 
 Input:
 	|0|->1->3->2->null
