@@ -24,7 +24,7 @@ import java.util.Map;
     }
  }
  * */
-class CheckDFS {
+public class CheckDFS {
 	//return unvisited member of map
     public static int nextUnvisitedNode(Graph g, Map<Integer,Boolean> map, int node){
         int res = -1;
@@ -66,8 +66,7 @@ class CheckDFS {
         }
         return result;
     }
-}
-public class Main {
+
     public static void main(String[] args) {
         Graph graph = new Graph(5);
         graph.addEdge(0,1);
