@@ -11,7 +11,22 @@ import java.util.Arrays;
 
 public class CheckReArrange {
     public static void reArrange(int[] arr){
-        Arrays.sort(arr);
+        int[] res = new int[arr.length];
+        int left = 0, right = arr.length-1, i =0;
+        while(left <= right){
+            if(arr[i] < 0){
+                res[left] = arr[i];
+                left++;
+            }
+            else{
+                res[right] = arr[i];
+                right--;
+            }
+            i++;
+        }
+        for (int j =0; j < arr.length; j++){ //copy of array since this function doesn't return anything
+            arr[j] = res[j];
+        }
     }
 
     public static void main(String[] args) {
