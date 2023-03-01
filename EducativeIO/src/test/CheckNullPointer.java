@@ -1,4 +1,4 @@
-package ds.test;
+package test;
 
 /**
  * Avoiding null pointer exception using constants from config.
