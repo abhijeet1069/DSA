@@ -1,1 +1,0 @@
-Trie comes from the word "retrieval", as the main purpose of using this structure is that it provides fast retrieval. Mostly, used in searching words in the dictionary 
