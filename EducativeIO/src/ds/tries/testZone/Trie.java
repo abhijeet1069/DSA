@@ -1,4 +1,4 @@
-package ds.tries.ex01;
+package ds.tries.testZone;
 
 public class Trie {
     private TrieNode root;
@@ -11,7 +11,7 @@ public class Trie {
     public TrieNode getRoot(){
         return root;
     }
-    public void insert(String key){
+    public void insert(String key,String meaning){
         if(key == null){
             return;
         }
@@ -26,10 +26,11 @@ public class Trie {
             currentNode = currentNode.children[index];
         }
         currentNode.markAsLeaf();
+        currentNode.meaning = meaning;
     }
-    public boolean search(String key){
+    public TrieNode search(String key){
         if(key == null){
-            return false;
+            return null;
         }
         key = key.toLowerCase();
         TrieNode currentNode = this.root;
@@ -37,13 +38,13 @@ public class Trie {
         for(int level=0; level<key.length(); level++){
             index = getIndex(key.charAt(level));
             if(currentNode.children[index] == null){
-                return false;
+                return null;
             }
             currentNode = currentNode.children[index];
         }
         if(currentNode.isEndWord){
-            return true;
+            return currentNode;
         }
-        return false;
+        return null;
     }
 }
