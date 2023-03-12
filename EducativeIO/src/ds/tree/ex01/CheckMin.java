@@ -1,4 +1,18 @@
 package ds.tree.ex01;
+/**
+ Implement findMin() to return the min integer value from the given BST.
+ 	int findMin(Node root);
+
+ Sample Input
+ 	bst = {
+ 		6 -> 4,9
+ 		4 -> 2,5
+ 		9 -> 8,12
+ 		12 -> 10,14
+ }
+ Sample Output
+ 	2
+ * */
 
 public class CheckMin 
 {

@@ -3,6 +3,20 @@ package ds.tree.ex02;
 import java.util.ArrayList;
 
 /**
+ Implement the findKthMax() to take a BST and any number "k" as input, and return kth max number from that tree.
+ 	int findKthMax(Node root, int k);
+ Sample Input
+ 	bst = {
+ 		6 -> 4,9
+ 		4 -> 2,5
+ 		9 -> 8,12
+ 		12 -> 10,14
+ 	}
+ 	k = 3
+
+ 	Sample Output
+ 		10
+
  Core Logic : Move rightward and insert elements in list in ascending order.
  * */
 

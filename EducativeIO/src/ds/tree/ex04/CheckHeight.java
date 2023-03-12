@@ -4,6 +4,23 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ Implement the findHeight() function to find the height of a given BST.
+ 	Height of a Node — Maximum number of connections between the node and a leaf node in its path.
+ 	Height of a Tree — Height of its root node.
+ 	int findHeight(Node root);
+
+ Sample Input:
+ 	bst = { //here 6 is the root
+ 		6 -> 4,9
+ 		4 -> 2,5
+ 		9 -> 8,12
+ 		12 -> 10,14
+ 	}
+ Sample Output:
+ 		3
+ * */
+
 public class CheckHeight {
 
 	public static int findHeight(Node root) {

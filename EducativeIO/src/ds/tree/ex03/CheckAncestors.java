@@ -1,5 +1,22 @@
 package ds.tree.ex03;
 
+/**
+ Implement findAncestors() function to find the ancestor os the node with the value "k".
+ 	String findAncestors(Node root, int k);
+
+ Sample Input
+ 	bst = {
+ 		6 -> 4,9
+ 		4 -> 2,5
+ 		9 -> 8,12
+ 		12 -> 10,14
+ 		}
+ 	k = 10
+
+ Sample Output
+ 	6,9,12,
+ * */
+
 public class CheckAncestors {
 	  public static String findAncestors(Node root, int k) {
 		  Node temp = root;
