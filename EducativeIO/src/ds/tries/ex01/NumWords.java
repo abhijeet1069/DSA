@@ -1,30 +1,28 @@
 package ds.tries.ex01;
 
-/**
- Core Logic : Number of Words = Number of endWord true flags
- * */
-public class NumWords { //loop needs to go through unique paths. Let's try with ""DFS""
+import java.util.HashMap;
 
-    public static int countWords(TrieNode root, int count){
-        if(root == null){
-            return 0;
+/**
+Implement the totalWords(TrieNode root) function to find the total number of words in a Trie.
+	Sample Input
+		String keys[] = {"the", "a", "there", "answer", "any","by", "bye", "their","abc"};
+	Sample Output
+		9
+ * */
+public class NumWords { 
+	
+	public static int totalWords(TrieNode root){ //More practise needs to be done in recursion
+        int result = 0;
+        if(root.isEndWord) {
+        	result++;
         }
-        else{
-            for(int i = 0; i < TrieNode.ALPHABET_SIZE; i++){
-                if(root.children[i] != null){ //ignore null children
-                    if(root.children[i].isEndWord){ //leaf Node
-                        count += 1;
-                    }
-                    else{
-                        count += countWords(root.children[i],count);
-                    }
-                }
-            }
+        for(int i = 0 ; i < TrieNode.ALPHABET_SIZE; i++) {
+        	if(root.children[i] != null) {
+        		result += totalWords(root.children[i]);
+        	}
         }
-        return count;
-    }
-    public static int totalWords(TrieNode root){
-        return countWords(root,0);
+        
+        return result;
     }
 
     public static void main(String[] args) {
