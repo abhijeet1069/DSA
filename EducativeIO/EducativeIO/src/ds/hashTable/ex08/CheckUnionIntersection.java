@@ -2,6 +2,18 @@ package ds.hashTable.ex08;
 
 import java.util.HashMap;
 
+/*
+Implement union and intersection of lists.
+ 
+Input:
+ 	list1 = 15->22->8->null
+	list2 = 7->14->22->null
+	
+Output:
+	Union = 15->22->8->7->14->null
+	Intersection = 22->null
+ * */
+
 public class CheckUnionIntersection {
     public static <V> void removeDuplicatesWithHashing(SinglyLinkedList<V> list) {
         SinglyLinkedList<Integer> result = new SinglyLinkedList<>();
@@ -50,6 +62,21 @@ public class CheckUnionIntersection {
     }
     
     public static void main(String[] args) {
-    	SinglyLinkedList<Integer> list,list2 = new SinglyLinkedList<>();
+    	SinglyLinkedList<Integer> list1 = new SinglyLinkedList<>();
+    	SinglyLinkedList<Integer> list2 = new SinglyLinkedList<>();
+    	
+    	list1.insertAtEnd(15);
+    	list1.insertAtEnd(22);
+    	list1.insertAtEnd(8);
+    	
+    	list2.insertAtEnd(7);
+    	list2.insertAtEnd(14);
+    	list2.insertAtEnd(22);
+    	
+    	unionWithHashing(list1,list2).printList();
+    	intersectionWithHashing(list1,list2).printList();
+    	
+    	
+    	
     }
 }
