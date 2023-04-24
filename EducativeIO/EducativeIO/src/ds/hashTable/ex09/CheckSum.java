@@ -2,7 +2,17 @@ package ds.hashTable.ex09;
 
 import java.util.HashSet;
 
-//return the elements in the array whose sum is equal to the value passed as parameter 
+/*
+Implement the findSum(int[] arr, int n) function, that returns an array of two integers that add
+up to n in an array.
+
+Input:
+	arr = {1, 21, 3, 14, 5, 60, 7, 6}
+	value = 27
+	
+Output:
+	arr = {21, 6} or {6, 21}
+ * */
 
 public class CheckSum{   
 	public static int[] findSum(int[] arr, int n){
