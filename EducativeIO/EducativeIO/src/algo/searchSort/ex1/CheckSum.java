@@ -2,6 +2,17 @@ package algo.searchSort.ex1;
 
 import java.util.HashSet;
 
+/*
+Implement a function finSum() that returns an array of two integers that add upto a given value.
+
+Input:
+	arr = {1,21,3,14,5,60,7,6};
+	value = 81;
+
+Output:
+	arr = {21,60};
+ * */
+
 public class CheckSum {
 
 	public static int[] findSum(int[] arr, int n) {
@@ -23,7 +34,8 @@ public class CheckSum {
 	public static void main(String[] args) {
 		int[] arr = new int[]{1,21,3,14,5,60,7,6};
 		int value = 81;
-
+		int[] res = findSum(arr,value);
+		System.out.println(res[0]+","+res[1]);
 	}
 
 }
