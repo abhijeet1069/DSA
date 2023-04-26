@@ -19,7 +19,7 @@ public class CheckRemoveEven {
                 oddCount++;
             }
         }
-        int[] res = new int[oddCount];
+        int[] res = new int[oddCount]; //simply putting in array using extra loop. No extra nonsense of swapping
         for(int  i = 0 ; i < res.length; i++)
             res[i] = temp[i];
 

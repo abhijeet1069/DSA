@@ -13,8 +13,8 @@ public class CheckMergeArray {
         int size2 = arr2.length;
         int[] res = new int[size1+size2];
         int i = 0, j = 0, k = 0;
-        while(i < size1 && j < size2){
-            if(arr1[i] <= arr2[j]){
+        while(i < size1 && j < size2){ //The while loops here are quite counter-intutive. Consume till the size of shorter array
+            if(arr1[i] <= arr2[j]){	// Even in Cormen they are using Integer.MAX and Integer.MIN. But this is a better approach
                 res[k] = arr1[i];
                 i++;
             }

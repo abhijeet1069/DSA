@@ -28,8 +28,8 @@ public class CheckSum {
         }
         return -1;
     }
-    public static int[] findSum(int[] arr, int n) {
-        int[] result = new int[2];
+    public static int[] findSum(int[] arr, int n) { //a general solution would be using HashMap.
+        int[] result = new int[2];					//But if the input is sorted. Better use BinarySearch
         Arrays.sort(arr);
         for(int i = 0; i < arr.length; i++){
             result[0] = arr[i];

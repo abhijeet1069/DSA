@@ -1,7 +1,8 @@
 package ds.stackQueue.ex07;
 
 /**
- For each element in an array, find the next greater element. Also, the next greater element for the last or max value in the array is -1
+ For each element in an array, find the next greater element. Also, the next greater element for 
+ the last or max value in the array is -1
  Input:
  	arr = {4,6,3,2,8,1}
  Output:

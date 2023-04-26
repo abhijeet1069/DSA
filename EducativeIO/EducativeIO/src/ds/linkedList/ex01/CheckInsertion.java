@@ -1,6 +1,6 @@
 package ds.linkedList.ex01;
 
-/**
+/*
  Complete function insertAtEnd(T data). The function inserts data at the end of list
  Input:
     list = 0->1->2

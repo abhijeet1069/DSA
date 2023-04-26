@@ -1,7 +1,7 @@
 package ds.stackQueue.ex10;
 
 /**
-Return min of sack in O(1) time.
+Return min of stack in O(1) time.
  Input:
     stack = top->9,3,1,4,2,5
  Output:
@@ -51,10 +51,6 @@ public class MinStack {
 		}
         
     }
-    
-    
-    
-    
     
     public static void main(String[] args) {
     	MinStack stack = new MinStack(6);

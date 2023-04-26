@@ -19,7 +19,7 @@ public class FindMax {
             if(currentSum > maxSum){
                 maxSum = currentSum;
             }
-            if(currentSum < 0){
+            if(currentSum < 0){ //remove the negative components if any
                 currentSum = 0;
             }
         }

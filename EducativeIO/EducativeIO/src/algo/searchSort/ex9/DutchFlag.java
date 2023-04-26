@@ -1,6 +1,8 @@
 package algo.searchSort.ex9;
 
 /*
+The output is a printed array where 0's , 1's and 2's are sorted.
+
 Input:
 	arr = {2, 0, 0, 1, 2, 1, 0};
 	
