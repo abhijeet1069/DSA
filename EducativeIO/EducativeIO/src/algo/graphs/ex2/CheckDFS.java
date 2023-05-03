@@ -2,6 +2,17 @@ package algo.graphs.ex2;
 
 import java.util.HashMap;
 
+/*
+Implement depth first search traversal.
+
+Input:
+	The input is a graph in the form of an adjacency list.
+	|V|=5, E:[(0,1)(0,2)(1,3)(1,4)], where, |V| = Number of vertices and E = edges.
+	
+Output:
+	"01342"
+ * */
+
 class CheckDFS {
     //Depth First Traversal of Graph g 
     public static String dfs(Graph g) {

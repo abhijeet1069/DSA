@@ -4,8 +4,17 @@ import java.util.HashMap;
 
 class CheckBFS {
 
-  //Breadth First Traversal of Graph g 
-  //Breadth First Traversal of Graph g 
+/*
+Implement depth first search traversal.
+
+Input:
+	The input is a graph in the form of an adjacency list.
+	|V|=5, E:[(0,1)(0,2)(1,3)(1,4)], where, |V| = Number of vertices and E = edges.
+	
+Output:
+	"01234"
+ * */	
+	
 	  public static String bfs(Graph g) {
 	    String result = "";
 	    HashMap<Integer,Boolean> visitedMap = new HashMap<>();

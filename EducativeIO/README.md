@@ -1,5 +1,7 @@
 A collection of DSA ideas which are quite counter-intutive, but represent the beauty of the subject.
 
+DATA-STRUCTURES:
+
 ARRAYS
 1) ds.arrays.ex02.CheckMergeArray - Merging array using only while loops
 
@@ -25,13 +27,18 @@ STACKS/QUEUES:
 9) ds.stackQueue.ex09.CheckBalancedChallenge - Using stack to check if an expression is balanced or not.
 
 GRAPHS:
+
+
+
 10) ds.graphs.ex01.CheckBFS - BFS is same as DFS except that DFS uses stack instead of queue
 
 11) ds.graphs.ex07.CheckTree - A graph is a tree if there is connected, has no cycle and each node has only one parent
 
 12) ds.graphs.ex08.CheckMin -  Main logic is to find vertices level using BFS. And then find min level of connected node to destination + 1
 
-TREES:
+ALGORITHMS:
 
+GRAPHS:
 
+11) algo.graphs.ex1.CheckBFS - In graphs main program is BFS. Even DFS is a version of BFS, instead of queue we use stack. Else everything is same. At last, a new concept of 'color' is introduced.
 
