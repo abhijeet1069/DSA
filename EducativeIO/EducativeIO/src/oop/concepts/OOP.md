@@ -13,12 +13,18 @@ Building blocks of OOP:
 		
 Principle of OOP:
 
-	Encapsulation - Hiding data using getters and setters (Method of data hiding)
-	Abstraction - Using interface and abstract classes (Method of data hiding)
+	Encapsulation(Data Hiding) - Hides data using getters and setters. The goal is to implement classes in a way that prevents unauthorized								access to or modification of the original contents of a class by its instances or objects. 
+				 			(encapsulate - express the essential features of something succinctly.)
+				 
+	Abstraction(Implementation hiding) - Using interface and abstract classes (Method of data hiding)
+				(existing in thought or as an idea but not having a physical or concrete existence)
+				
 	Inheritance - Child class inherits all the public attributes and methods of parent class)
-	Polymorphism - Method overloading and overriding
+	Polymorphism - Method overloading and overriding (Greek for many forms)
 	
-Design Principle:
+Design Principle (SOLID):
+
 	Single Responsibility Principle - Any class or component in out code should only have one functionality.
 	Open Closed Principle - A system should improve easily by adding new code instead of changing the core code
-	
+	Liskov Substitution Principle
+	Dependency Inversion Principle
