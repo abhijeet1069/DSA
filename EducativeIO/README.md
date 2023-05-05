@@ -42,3 +42,6 @@ GRAPHS:
 
 11) algo.graphs.ex1.CheckBFS - In graphs main program is BFS. Even DFS is a version of BFS, instead of queue we use stack. Else everything is same. At last, a new concept of 'color' is introduced.
 
+GREEDY:
+12)        package algo.greedy.ex2.MinPlatforms : Beatiful problem
+

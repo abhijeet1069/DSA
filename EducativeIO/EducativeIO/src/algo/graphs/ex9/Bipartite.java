@@ -1,5 +1,26 @@
 package algo.graphs.ex9;
 
+/*
+Input:
+	Check if a graph is bipartite or not.
+
+	graph =  {
+	   0 -- 1 
+       1 -- 2 
+       2 -- 3 
+       3 -- 4 
+       4 -- 5 
+       5 -- 0
+       }
+       
+Output:
+	true
+	
+Logic:  Color the unvisited child node with color other than that of parent and keep traversing. If while traversal
+		we encountered the same color visited node, then the graph cannot be colored using 2 colors. Thus, the graph
+		is not bipartite. 
+ * */
+
 import java.util.LinkedList;
 import java.util.Queue;
 
