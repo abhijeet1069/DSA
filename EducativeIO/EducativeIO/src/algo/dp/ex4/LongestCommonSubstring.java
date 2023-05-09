@@ -1,4 +1,4 @@
-package algo.dp.ex2;
+package algo.dp.ex4;
 
 /*
 Given two strings, s1 and s2, write a function that finds and returns the length of the longest substring of 
