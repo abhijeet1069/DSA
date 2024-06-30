@@ -1,5 +1,5 @@
 #!/bin/sh
 
 git add --all
-git commit -m "new commit"
+git commit -m "starting opendsa"
 git push
